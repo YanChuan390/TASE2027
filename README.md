@@ -11,7 +11,8 @@ Static website for the International Symposium on Theoretical Aspects of Softwar
 - `site/index.html`: all conference information and the five content panels.
 - `site/style.css`: colours, typography, layout and responsive breakpoints.
 - `site/main.js`: hash-based content navigation, contextual sidebar and mobile menu.
-- `site/hong-kong.svg`: original stylised harbour skyline illustration.
+- `site/victoria-harbour.jpg`: locally hosted real Victoria Harbour photograph (CC0); see `site/PHOTO-CREDITS.md`.
+- `site/hong-kong.svg`: original illustration retained as an unused asset.
 
 ```bash
 cd ~/Desktop/TASE2027
