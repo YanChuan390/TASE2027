@@ -1,32 +1,47 @@
-# TASE 2027
+# TASE 2027 · Hong Kong
 
-Original academic conference template, built with HTML, CSS and JavaScript. No dependencies or build step. All conference facts not supplied by the organisers remain explicitly unannounced.
+Static website for the International Symposium on Theoretical Aspects of Software Engineering. Built with HTML, CSS and vanilla JavaScript; no installation or build step required.
 
-## Preview
+- Website: https://yanchuan390.github.io/TASE2027/
+- Repository: https://github.com/YanChuan390/TASE2027
+- Canonical local checkout: `~/Desktop/TASE2027`
 
-From this folder: `python3 -m http.server 2027 --directory site`
+## Edit and preview
 
-Open http://localhost:2027 .
+- `site/index.html`: all conference information and the five content panels.
+- `site/style.css`: colours, typography, layout and responsive breakpoints.
+- `site/main.js`: hash-based content navigation, contextual sidebar and mobile menu.
+- `site/hong-kong.svg`: original stylised harbour skyline illustration.
 
-## Publish on GitHub Pages
+```bash
+cd ~/Desktop/TASE2027
+python3 -m http.server 2027 --directory site
+```
 
-1. Create a GitHub repository and upload this folder's contents, including `.github/workflows/pages.yml`, to branch `main`.
-2. Open repository Settings → Pages → Source and choose GitHub Actions.
-3. Run the Deploy conference website workflow (or push a new commit).
-4. Read the published URL from the workflow's deployment result.
+Open http://localhost:2027 . Without JavaScript, all content panels remain readable.
 
-## Custom domain
+## Publish updates
 
-TASE2027 is a name, not a complete domain. Confirm the domain suffix and ownership first. No domain was purchased, verified or bound, and no CNAME file has been created.
+Review changes before committing. Pushes to `main` trigger the existing GitHub Pages workflow.
 
-After confirming ownership, add the complete domain in Settings → Pages → Custom domain, follow GitHub's current DNS instructions and enable HTTPS. Do not configure DNS for an unowned domain.
+```bash
+cd ~/Desktop/TASE2027
+git diff
+git add site README.md
+git commit -m "docs(site): update conference information"
+git push
+```
 
-## Edit content
+Deployment progress: https://github.com/YanChuan390/TASE2027/actions
 
-- `site/index.html`: conference text, navigation, dates and committee.
-- `site/style.css`: colours, typography, layout and mobile styles.
-- `site/main.js`: accessible mobile menu.
-- `site/favicon.svg`: site icon.
-- `.github/workflows/pages.yml`: automatic GitHub Pages deployment.
+## Content sources and confirmation
 
-Before public launch, confirm the full conference title, dates, venue, call for papers, committee and contact details. Submission and registration links are intentionally absent until official URLs are provided.
+The original layout uses conference-portal conventions inspired by Researchr: compact navigation, section links and a deadline sidebar. No Researchr code or branding is reused.
+
+Series background was paraphrased from https://tase2026.github.io/ and representative research themes from https://tase2026.github.io/c_cfp.html . These themes are explicitly identified as series context, pending the 2027 call.
+
+Hong Kong is confirmed by the organiser. Exact dates, venue, committee, submission rules, review policy, registration, publication arrangements and speakers remain unannounced. No 2026 deadline, committee, submission URL or publication agreement is presented as current.
+
+## Custom domain later
+
+The website currently uses the GitHub Pages URL above. Once a domain is registered and verified, configure it in repository Settings → Pages, follow GitHub's current DNS instructions and enable HTTPS. No custom domain has been bound.
